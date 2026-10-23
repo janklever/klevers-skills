@@ -1,0 +1,379 @@
+# Dados sob a licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0).
+# https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br
+#
+# A coluna/campo "wcag" (correspondência entre itens da NBR 17225 e critérios da WCAG 2.2) vem da publicação:
+#   "Correspondência entre os critérios da WCAG 2.2 e os itens da ABNT NBR 17225"
+#   Autoria: Amanda Marques, Jeniffer Deus e Reinaldo Ferraz
+#   Publicação: Ceweb.br (iniciativa do NIC.br e do CGI.br), plataforma Todos na Web
+#   Fonte: https://todosnaweb.ceweb.br/publicacoes/wcag-2-2-abnt-17225
+#   Licença da fonte: CC BY-SA 4.0
+# Alterações feitas neste repositório: tabela extraída e reorganizada em YAML e Markdown; correspondência
+# invertida (por item da NBR 17225); notas reescritas de forma resumida; adicionados títulos e resumos
+# próprios de cada item. Não há indicação de que os autores ou o Ceweb.br endossem este repositório.
+# Sem garantias: erros de extração são possíveis. Confira a página original.
+# Veja também data/NOTICE.md.
+#
+# Os resumos dos itens são de autoria deste repositório e não reproduzem o texto da ABNT NBR 17225
+# (publicação da ABNT). Para o texto oficial, consulte a ABNT.
+#
+# Este arquivo reproduz a correspondência da publicação do Ceweb.br, critério por critério.
+# Campos: criterio (WCAG 2.2), nivel (A, AA, AAA), itens_nbr17225, nota (da publicação, em palavras resumidas).
+
+- criterio: "1.1.1"
+  nivel: A
+  itens_nbr17225: ["5.2.1", "5.2.2", "5.2.3", "5.2.4", "5.2.5", "5.2.6", "5.9.16"]
+  nota: "A orientação sobre CAPTCHA está na seção de itens problemáticos, sem número de item."
+
+- criterio: "1.2.1"
+  nivel: A
+  itens_nbr17225: ["5.14.1", "5.14.3", "5.14.4"]
+
+- criterio: "1.2.2"
+  nivel: A
+  itens_nbr17225: ["5.14.2"]
+
+- criterio: "1.2.3"
+  nivel: A
+  itens_nbr17225: ["5.14.3", "5.14.4", "5.14.5"]
+
+- criterio: "1.2.4"
+  nivel: AA
+  itens_nbr17225: ["5.14.9"]
+
+- criterio: "1.2.5"
+  nivel: AA
+  itens_nbr17225: ["5.14.4", "5.14.5"]
+
+- criterio: "1.2.6"
+  nivel: AAA
+  itens_nbr17225: ["5.14.6"]
+  nota: "A janela de Libras é detalhada na ABNT NBR 15290."
+
+- criterio: "1.2.7"
+  nivel: AAA
+  itens_nbr17225: ["5.14.5"]
+
+- criterio: "1.2.8"
+  nivel: AAA
+  itens_nbr17225: ["5.14.3"]
+
+- criterio: "1.2.9"
+  nivel: AAA
+  itens_nbr17225: ["5.14.10"]
+
+- criterio: "1.3.1"
+  nivel: A
+  itens_nbr17225: ["5.3.1", "5.3.2", "5.3.5", "5.4.1", "5.4.2", "5.4.4", "5.4.5", "5.5.1", "5.5.2", "5.6.1", "5.6.2", "5.6.3", "5.6.5", "5.7.1", "5.7.2", "5.8.1", "5.8.2", "5.9.2", "5.9.3", "5.9.6", "5.12.8", "5.12.9", "5.13.4", "5.13.11", "5.13.12"]
+  nota: "A página indica que 25 itens detalham este critério."
+
+- criterio: "1.3.2"
+  nivel: A
+  itens_nbr17225: ["5.9.2", "5.10.2", "5.13.6"]
+
+- criterio: "1.3.3"
+  nivel: A
+  itens_nbr17225: ["5.8.15", "5.10.1"]
+
+- criterio: "1.3.4"
+  nivel: AA
+  itens_nbr17225: ["5.10.3"]
+
+- criterio: "1.3.5"
+  nivel: AA
+  itens_nbr17225: ["5.9.8"]
+
+- criterio: "1.3.6"
+  nivel: AAA
+  itens_nbr17225: ["5.4.1", "5.4.2", "5.4.3", "5.4.4", "5.13.9"]
+
+- criterio: "1.4.1"
+  nivel: A
+  itens_nbr17225: ["5.11.1"]
+
+- criterio: "1.4.2"
+  nivel: A
+  itens_nbr17225: ["5.14.7"]
+
+- criterio: "1.4.3"
+  nivel: AA
+  itens_nbr17225: ["5.11.2", "5.11.3"]
+  nota: "Atender ao 5.11.2 também atende ao 5.11.3."
+
+- criterio: "1.4.4"
+  nivel: AA
+  itens_nbr17225: ["5.12.7", "5.13.5"]
+
+- criterio: "1.4.5"
+  nivel: AA
+  itens_nbr17225: ["5.2.5"]
+
+- criterio: "1.4.6"
+  nivel: AAA
+  itens_nbr17225: ["5.11.2"]
+  nota: "Atender ao 5.11.2 também atende ao 5.11.3."
+
+- criterio: "1.4.7"
+  nivel: AAA
+  itens_nbr17225: ["5.14.8"]
+
+- criterio: "1.4.8"
+  nivel: AAA
+  itens_nbr17225: ["5.12.1", "5.12.2", "5.12.5", "5.12.6", "5.12.7"]
+
+- criterio: "1.4.9"
+  nivel: AAA
+  itens_nbr17225: ["5.2.5"]
+
+- criterio: "1.4.10"
+  nivel: AA
+  itens_nbr17225: ["5.10.4", "5.12.6", "5.13.5"]
+
+- criterio: "1.4.11"
+  nivel: AA
+  itens_nbr17225: ["5.11.4", "5.11.5", "5.11.6"]
+
+- criterio: "1.4.12"
+  nivel: AA
+  itens_nbr17225: ["5.12.1", "5.12.2", "5.12.3", "5.12.4"]
+
+- criterio: "1.4.13"
+  nivel: AA
+  itens_nbr17225: ["5.1.7", "5.1.8", "5.1.9"]
+
+- criterio: "2.1.1"
+  nivel: A
+  itens_nbr17225: ["5.1.5", "5.1.12", "5.1.13", "5.1.15"]
+  nota: "Há remissão cruzada aos itens 5.1.13 e 5.1.16."
+
+- criterio: "2.1.2"
+  nivel: A
+  itens_nbr17225: ["5.1.6"]
+
+- criterio: "2.1.3"
+  nivel: AAA
+  itens_nbr17225: ["5.1.5", "5.1.12", "5.1.15"]
+  nota: "Há remissão cruzada aos itens 5.1.13 e 5.1.16."
+
+- criterio: "2.1.4"
+  nivel: A
+  itens_nbr17225: ["5.1.10", "5.1.11"]
+  nota: "O 5.1.10 é recomendação e o 5.1.11 é requisito."
+
+- criterio: "2.2.1"
+  nivel: A
+  itens_nbr17225: ["5.16.1", "5.16.2"]
+  nota: "Há remissão cruzada ao item 5.16.2."
+
+- criterio: "2.2.2"
+  nivel: A
+  itens_nbr17225: ["5.15.1", "5.16.3"]
+
+- criterio: "2.2.3"
+  nivel: AAA
+  itens_nbr17225: ["5.16.1"]
+  nota: "Há remissão cruzada ao item 5.16.2."
+
+- criterio: "2.2.4"
+  nivel: AAA
+  itens_nbr17225: ["5.16.4"]
+
+- criterio: "2.2.5"
+  nivel: AAA
+  itens_nbr17225: ["5.16.5"]
+
+- criterio: "2.2.6"
+  nivel: AAA
+  itens_nbr17225: ["5.16.6"]
+
+- criterio: "2.3.1"
+  nivel: A
+  itens_nbr17225: ["5.15.4"]
+
+- criterio: "2.3.2"
+  nivel: AAA
+  itens_nbr17225: ["5.15.3"]
+  nota: "Há remissão cruzada ao item 5.15.4."
+
+- criterio: "2.3.3"
+  nivel: AAA
+  itens_nbr17225: ["5.15.2"]
+
+- criterio: "2.4.1"
+  nivel: A
+  itens_nbr17225: ["5.7.11", "5.7.12"]
+
+- criterio: "2.4.2"
+  nivel: A
+  itens_nbr17225: ["5.13.1"]
+
+- criterio: "2.4.3"
+  nivel: A
+  itens_nbr17225: ["5.1.4"]
+
+- criterio: "2.4.4"
+  nivel: A
+  itens_nbr17225: ["5.7.3", "5.7.4", "5.7.6", "5.7.7", "5.7.8", "5.7.9", "5.7.10"]
+
+- criterio: "2.4.5"
+  nivel: AA
+  itens_nbr17225: ["5.7.13"]
+
+- criterio: "2.4.6"
+  nivel: AA
+  itens_nbr17225: ["5.3.2", "5.3.3", "5.3.5", "5.6.4", "5.8.3", "5.9.4"]
+
+- criterio: "2.4.7"
+  nivel: AA
+  itens_nbr17225: ["5.1.1"]
+
+- criterio: "2.4.8"
+  nivel: AAA
+  itens_nbr17225: ["5.7.14"]
+
+- criterio: "2.4.9"
+  nivel: AAA
+  itens_nbr17225: ["5.2.2", "5.7.3", "5.7.5", "5.7.6", "5.7.7"]
+
+- criterio: "2.4.10"
+  nivel: AAA
+  itens_nbr17225: ["5.3.3", "5.3.4", "5.3.5", "5.6.4"]
+
+- criterio: "2.4.11"
+  nivel: AA
+  itens_nbr17225: ["5.1.2", "5.1.3"]
+  nota: "Há remissão cruzada ao item 5.1.3."
+
+- criterio: "2.4.12"
+  nivel: AAA
+  itens_nbr17225: ["5.1.2"]
+  nota: "Há remissão cruzada ao item 5.1.3."
+
+- criterio: "2.4.13"
+  nivel: AAA
+  itens_nbr17225: ["5.10.5", "5.11.6"]
+
+- criterio: "2.5.1"
+  nivel: A
+  itens_nbr17225: ["5.8.12"]
+
+- criterio: "2.5.2"
+  nivel: A
+  itens_nbr17225: ["5.8.11"]
+
+- criterio: "2.5.3"
+  nivel: A
+  itens_nbr17225: ["5.13.7"]
+
+- criterio: "2.5.4"
+  nivel: A
+  itens_nbr17225: ["5.8.14"]
+
+- criterio: "2.5.5"
+  nivel: AAA
+  itens_nbr17225: ["5.8.6"]
+
+- criterio: "2.5.6"
+  nivel: AAA
+  itens_nbr17225: ["5.1.14", "5.9.16"]
+
+- criterio: "2.5.7"
+  nivel: AA
+  itens_nbr17225: ["5.8.13"]
+
+- criterio: "2.5.8"
+  nivel: AA
+  itens_nbr17225: ["5.8.6", "5.8.7"]
+
+- criterio: "3.1.1"
+  nivel: A
+  itens_nbr17225: ["5.13.2"]
+
+- criterio: "3.1.2"
+  nivel: AA
+  itens_nbr17225: ["5.13.3"]
+
+- criterio: "3.1.3"
+  nivel: AAA
+  itens_nbr17225: ["5.12.10"]
+
+- criterio: "3.1.4"
+  nivel: AAA
+  itens_nbr17225: ["5.12.11"]
+
+- criterio: "3.1.5"
+  nivel: AAA
+  itens_nbr17225: ["5.6.6", "5.12.12"]
+
+- criterio: "3.1.6"
+  nivel: AAA
+  itens_nbr17225: ["5.12.13"]
+
+- criterio: "3.2.1"
+  nivel: A
+  itens_nbr17225: ["5.8.8", "5.8.9"]
+
+- criterio: "3.2.2"
+  nivel: A
+  itens_nbr17225: ["5.8.8", "5.8.10", "5.9.1", "5.9.14"]
+
+- criterio: "3.2.3"
+  nivel: AA
+  itens_nbr17225: ["5.7.15"]
+
+- criterio: "3.2.4"
+  nivel: AA
+  itens_nbr17225: ["5.7.5", "5.8.4", "5.8.5"]
+
+- criterio: "3.2.5"
+  nivel: AAA
+  itens_nbr17225: ["5.7.6", "5.8.8"]
+
+- criterio: "3.2.6"
+  nivel: A
+  itens_nbr17225: ["5.7.16"]
+
+- criterio: "3.3.1"
+  nivel: A
+  itens_nbr17225: ["5.9.9"]
+
+- criterio: "3.3.2"
+  nivel: A
+  itens_nbr17225: ["5.1.16", "5.9.1", "5.9.2", "5.9.5", "5.9.7"]
+
+- criterio: "3.3.3"
+  nivel: AA
+  itens_nbr17225: ["5.9.10"]
+
+- criterio: "3.3.4"
+  nivel: AA
+  itens_nbr17225: ["5.9.11", "5.9.12"]
+
+- criterio: "3.3.5"
+  nivel: AAA
+  itens_nbr17225: ["5.9.13"]
+
+- criterio: "3.3.6"
+  nivel: AAA
+  itens_nbr17225: ["5.9.11"]
+  nota: "Há remissão cruzada ao item 5.9.12."
+
+- criterio: "3.3.7"
+  nivel: A
+  itens_nbr17225: ["5.9.15"]
+
+- criterio: "3.3.8"
+  nivel: AA
+  itens_nbr17225: ["5.9.17", "5.9.18"]
+
+- criterio: "3.3.9"
+  nivel: AAA
+  itens_nbr17225: ["5.9.17"]
+  nota: "A nota da página cita um item \"5.8.18\", que não existe na própria página; provavelmente se refere ao 5.9.18. (Observação deste repositório.)"
+
+- criterio: "4.1.2"
+  nivel: A
+  itens_nbr17225: ["5.4.5", "5.8.3", "5.9.1", "5.13.4", "5.13.10", "5.13.12", "5.13.13"]
+
+- criterio: "4.1.3"
+  nivel: AA
+  itens_nbr17225: ["5.8.15", "5.13.8"]

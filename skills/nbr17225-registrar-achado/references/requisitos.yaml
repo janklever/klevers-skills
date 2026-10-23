@@ -1,0 +1,1223 @@
+# Dados sob a licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0).
+# https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br
+#
+# A coluna/campo "wcag" (correspondência entre itens da NBR 17225 e critérios da WCAG 2.2) vem da publicação:
+#   "Correspondência entre os critérios da WCAG 2.2 e os itens da ABNT NBR 17225"
+#   Autoria: Amanda Marques, Jeniffer Deus e Reinaldo Ferraz
+#   Publicação: Ceweb.br (iniciativa do NIC.br e do CGI.br), plataforma Todos na Web
+#   Fonte: https://todosnaweb.ceweb.br/publicacoes/wcag-2-2-abnt-17225
+#   Licença da fonte: CC BY-SA 4.0
+# Alterações feitas neste repositório: tabela extraída e reorganizada em YAML e Markdown; correspondência
+# invertida (por item da NBR 17225); notas reescritas de forma resumida; adicionados títulos e resumos
+# próprios de cada item. Não há indicação de que os autores ou o Ceweb.br endossem este repositório.
+# Sem garantias: erros de extração são possíveis. Confira a página original.
+# Veja também data/NOTICE.md.
+#
+# Os resumos dos itens são de autoria deste repositório e não reproduzem o texto da ABNT NBR 17225
+# (publicação da ABNT). Para o texto oficial, consulte a ABNT.
+#
+# Campos:
+#   id          número do item (seção 5 da NBR 17225)
+#   tipo        requisito | recomendacao (a norma distingue os dois)
+#   tema        agrupamento da seção
+#   titulo      nome curto do item
+#   resumo      o que o item pede, em palavras próprias
+#   wcag        critérios da WCAG 2.2 que a publicação do Ceweb.br relaciona ao item
+#   papel       quem atua (sugestão do repositório): design | dev | qa
+#   verificar   observação quando algo precisa ser conferido na norma
+#
+# Limites desta versão:
+#   - Itens 5.1 a 5.13.12 foram lidos com corpo de texto.
+#   - Item 5.13.13 e seções 5.14 a 5.16: só os títulos foram lidos.
+#   - Seção 6 e anexos (A, B, C) não estão incluídos.
+#   - A norma trata de conteúdo e aplicações web (inclui web em dispositivos móveis); não cobre aplicativos nativos.
+
+- id: "5.1.1"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Indicador de foco visível"
+  resumo: "Todo elemento que recebe foco do teclado mostra um indicador de foco visível."
+  wcag: ["2.4.7"]
+  papel: [design, dev, qa]
+
+- id: "5.1.2"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Elemento focado totalmente visível"
+  resumo: "O elemento focado deveria aparecer por inteiro, sem ficar parcialmente coberto."
+  wcag: ["2.4.11", "2.4.12"]
+  papel: [design, dev, qa]
+
+- id: "5.1.3"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Elemento focado parcialmente visível"
+  resumo: "O elemento focado precisa ficar ao menos parcialmente visível, mesmo com sobreposições criadas pelo autor da página."
+  wcag: ["2.4.11"]
+  papel: [design, dev, qa]
+
+- id: "5.1.4"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Ordem de foco previsível"
+  resumo: "O foco percorre os elementos em ordem lógica, coerente com a apresentação, sem perder sentido nem operabilidade."
+  wcag: ["2.4.3"]
+  papel: [design, dev, qa]
+
+- id: "5.1.5"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Uso do foco"
+  resumo: "Todo elemento que recebe foco deveria servir para alguma interação."
+  wcag: ["2.1.1", "2.1.3"]
+  papel: [design, dev, qa]
+
+- id: "5.1.6"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Armadilha de foco"
+  resumo: "Nenhum componente pode bloquear, prender ou interromper a navegação por teclado."
+  wcag: ["2.1.2"]
+  papel: [design, dev, qa]
+
+- id: "5.1.7"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Conteúdo adicional"
+  resumo: "Conteúdo adicional não deveria aparecer apenas por causa do foco do teclado ou da posição do cursor."
+  wcag: ["1.4.13"]
+  papel: [design, dev, qa]
+
+- id: "5.1.8"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Conteúdo adicional persistente"
+  resumo: "Conteúdo exibido por foco ou hover permanece visível até o foco ou ponteiro sair, até ser dispensado ou até a informação deixar de valer."
+  wcag: ["1.4.13"]
+  papel: [design, dev, qa]
+
+- id: "5.1.9"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Conteúdo adicional dispensável"
+  resumo: "Conteúdo exibido por foco ou hover pode ser dispensado sem mover foco ou ponteiro, salvo exceções (erro de entrada, conteúdo que não esconde outro)."
+  wcag: ["1.4.13"]
+  papel: [design, dev, qa]
+
+- id: "5.1.10"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Atalhos de teclado"
+  resumo: "Atalhos deveriam exigir uma tecla modificadora em vez de uma única tecla de caractere."
+  wcag: ["2.1.4"]
+  papel: [design, dev, qa]
+
+- id: "5.1.11"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Atalhos de uma tecla"
+  resumo: "Atalhos de uma única tecla podem ser desativados ou remapeados, ou só funcionam com o componente em foco."
+  wcag: ["2.1.4"]
+  papel: [design, dev, qa]
+
+- id: "5.1.12"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Acessibilidade total por teclado"
+  resumo: "Todas as funções da página deveriam ser operáveis por teclado, sem exceção."
+  wcag: ["2.1.1", "2.1.3"]
+  papel: [design, dev, qa]
+
+- id: "5.1.13"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Acessibilidade parcial por teclado"
+  resumo: "Trata de funções que não são operáveis por teclado, com o exemplo de desenho à mão livre. O trecho lido pode conter erro de redação."
+  wcag: ["2.1.1"]
+  papel: [design, dev, qa]
+  verificar: "Conferir o texto exato na norma: a redação lida parece dizer o contrário do esperado."
+
+- id: "5.1.14"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Mecanismos de entrada simultâneos"
+  resumo: "Não restringir os mecanismos de entrada disponíveis, salvo se essencial por segurança ou para respeitar configurações do usuário."
+  wcag: ["2.5.6"]
+  papel: [design, dev, qa]
+
+- id: "5.1.15"
+  tipo: recomendacao
+  tema: "Interação por teclado"
+  titulo: "Comportamento de componentes personalizados"
+  resumo: "Componentes personalizados deveriam se comportar de forma previsível."
+  wcag: ["2.1.1", "2.1.3"]
+  papel: [design, dev, qa]
+
+- id: "5.1.16"
+  tipo: requisito
+  tema: "Interação por teclado"
+  titulo: "Instruções de componentes personalizados"
+  resumo: "Componentes personalizados com interação complexa ou comportamento imprevisível trazem instruções de uso."
+  wcag: ["3.3.2"]
+  papel: [design, dev, qa]
+
+- id: "5.2.1"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Texto alternativo de imagem de conteúdo"
+  resumo: "Imagem que transmite informação relevante tem texto alternativo descrevendo essa informação."
+  wcag: ["1.1.1"]
+  papel: [design, dev]
+
+- id: "5.2.2"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Texto alternativo de imagem funcional"
+  resumo: "Imagem funcional tem texto alternativo que descreve o que o elemento faz."
+  wcag: ["1.1.1", "2.4.9"]
+  papel: [design, dev]
+
+- id: "5.2.3"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Imagem decorativa"
+  resumo: "Imagem decorativa tem alternativa vazia ou é implementada para ser ignorada por tecnologia assistiva."
+  wcag: ["1.1.1"]
+  papel: [design, dev]
+
+- id: "5.2.4"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Descrição de imagem complexa"
+  resumo: "Imagem complexa tem alternativa que a identifica e uma descrição detalhada na página, perto da imagem ou em página referenciada."
+  wcag: ["1.1.1"]
+  papel: [design, dev]
+
+- id: "5.2.5"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Imagem de texto"
+  resumo: "Evitar imagens de texto; as essenciais têm alternativa equivalente e as não essenciais podem ser personalizadas, também com alternativa equivalente."
+  wcag: ["1.1.1", "1.4.5", "1.4.9"]
+  papel: [design, dev, qa]
+
+- id: "5.2.6"
+  tipo: requisito
+  tema: "Imagens"
+  titulo: "Alternativa em mapa de imagem"
+  resumo: "Cada área interativa de um mapa de imagem tem seu próprio texto alternativo."
+  wcag: ["1.1.1"]
+  papel: [design, dev, qa]
+
+- id: "5.3.1"
+  tipo: requisito
+  tema: "Títulos"
+  titulo: "Semântica de títulos"
+  resumo: "Títulos têm semântica de título determinada programaticamente."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.3.2"
+  tipo: requisito
+  tema: "Títulos"
+  titulo: "Uso de títulos"
+  resumo: "Títulos só são usados para identificar seções de conteúdo."
+  wcag: ["1.3.1", "2.4.6"]
+  papel: [design, dev, qa]
+
+- id: "5.3.3"
+  tipo: recomendacao
+  tema: "Títulos"
+  titulo: "Título principal"
+  resumo: "Cada página deveria ter exatamente um título de nível 1 que a identifique."
+  wcag: ["2.4.6", "2.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.3.4"
+  tipo: recomendacao
+  tema: "Títulos"
+  titulo: "Títulos para seções"
+  resumo: "Toda seção de conteúdo deveria ter um título que a identifique."
+  wcag: ["2.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.3.5"
+  tipo: requisito
+  tema: "Títulos"
+  titulo: "Estrutura de títulos"
+  resumo: "Títulos seguem estrutura lógica, hierárquica e semanticamente correta."
+  wcag: ["1.3.1", "2.4.6", "2.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.4.1"
+  tipo: requisito
+  tema: "Regiões"
+  titulo: "Semântica de regiões"
+  resumo: "Regiões têm semântica programática compatível com sua função e tipo de conteúdo."
+  wcag: ["1.3.1", "1.3.6"]
+  papel: [dev, qa]
+
+- id: "5.4.2"
+  tipo: requisito
+  tema: "Regiões"
+  titulo: "Uso de regiões"
+  resumo: "Regiões organizam o conteúdo da página de acordo com o tipo de conteúdo."
+  wcag: ["1.3.1", "1.3.6"]
+  papel: [design, dev, qa]
+
+- id: "5.4.3"
+  tipo: recomendacao
+  tema: "Regiões"
+  titulo: "Conteúdo em regiões"
+  resumo: "Todo o conteúdo da página deveria estar dentro de regiões."
+  wcag: ["1.3.6"]
+  papel: [design, dev, qa]
+
+- id: "5.4.4"
+  tipo: recomendacao
+  tema: "Regiões"
+  titulo: "Regiões únicas"
+  resumo: "Não deveria haver mais de uma região de cabeçalho, principal ou rodapé por página."
+  wcag: ["1.3.1", "1.3.6"]
+  papel: [design, dev, qa]
+
+- id: "5.4.5"
+  tipo: requisito
+  tema: "Regiões"
+  titulo: "Regiões identificadas de forma única"
+  resumo: "Regiões do mesmo tipo têm nome acessível único que identifica cada uma."
+  wcag: ["1.3.1", "4.1.2"]
+  papel: [design, dev, qa]
+
+- id: "5.5.1"
+  tipo: requisito
+  tema: "Listas"
+  titulo: "Semântica de listas"
+  resumo: "Listas têm semântica programática compatível com o tipo (ordenada, não ordenada ou de definição)."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.5.2"
+  tipo: requisito
+  tema: "Listas"
+  titulo: "Uso de listas"
+  resumo: "Listas só agrupam itens de mesma natureza."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.6.1"
+  tipo: requisito
+  tema: "Tabelas"
+  titulo: "Semântica de tabelas"
+  resumo: "Tabelas de dados têm semântica determinada programaticamente."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.6.2"
+  tipo: requisito
+  tema: "Tabelas"
+  titulo: "Uso de tabelas"
+  resumo: "Tabelas só apresentam dados tabulares; tabelas de layout, se existirem, não têm semântica de tabela."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.6.3"
+  tipo: requisito
+  tema: "Tabelas"
+  titulo: "Associação de células e cabeçalhos"
+  resumo: "Cada célula de dados é associada programaticamente aos cabeçalhos de sua linha e coluna."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.6.4"
+  tipo: recomendacao
+  tema: "Tabelas"
+  titulo: "Título de tabela"
+  resumo: "Toda tabela deveria ter título ou legenda que a identifique."
+  wcag: ["2.4.6", "2.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.6.5"
+  tipo: requisito
+  tema: "Tabelas"
+  titulo: "Título associado à tabela"
+  resumo: "O título ou legenda da tabela é associado programaticamente a ela."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.6.6"
+  tipo: recomendacao
+  tema: "Tabelas"
+  titulo: "Descrição de tabela complexa"
+  resumo: "Tabelas complexas deveriam ter uma descrição em texto."
+  wcag: ["3.1.5"]
+  papel: [design, dev, qa]
+
+- id: "5.7.1"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Semântica de links"
+  resumo: "Links têm semântica definida programaticamente."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.7.2"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Uso de links"
+  resumo: "Links só são usados para navegação."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.7.3"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Finalidade do link sem contexto"
+  resumo: "Todo link deveria ter texto, alternativa ou nome acessível que diga sua função ou destino, por si só."
+  wcag: ["2.4.4", "2.4.9"]
+  papel: [design, dev, qa]
+
+- id: "5.7.4"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Finalidade do link em contexto"
+  resumo: "Todo link tem texto, alternativa ou nome acessível que, com o contexto, revele sua função ou destino."
+  wcag: ["2.4.4"]
+  papel: [design, dev, qa]
+
+- id: "5.7.5"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Rótulos de link consistentes"
+  resumo: "Links com o mesmo texto ou nome acessível não deveriam levar a destinos diferentes."
+  wcag: ["2.4.9", "3.2.4"]
+  papel: [design, dev, qa]
+
+- id: "5.7.6"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Aviso de nova aba ou janela"
+  resumo: "Ou não há links que abrem em nova aba ou janela, ou o usuário é avisado antes."
+  wcag: ["2.4.4", "2.4.9", "3.2.5"]
+  papel: [design, dev, qa]
+
+- id: "5.7.7"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Formato e tamanho de arquivo"
+  resumo: "Links para arquivos informam formato e tamanho no texto, na alternativa ou de outra forma."
+  wcag: ["2.4.4", "2.4.9"]
+  papel: [design, dev, qa]
+
+- id: "5.7.8"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Aviso de site externo"
+  resumo: "Links para sites externos informam que levam para fora do site."
+  wcag: ["2.4.4"]
+  papel: [design, dev, qa]
+
+- id: "5.7.9"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Sem texto redundante no link"
+  resumo: "Texto complementar não deveria repetir o texto, a alternativa ou o nome acessível do próprio link."
+  wcag: ["2.4.4"]
+  papel: [design, dev, qa]
+
+- id: "5.7.10"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Sem links duplicados adjacentes"
+  resumo: "Links adjacentes não deveriam levar ao mesmo destino."
+  wcag: ["2.4.4"]
+  papel: [design, dev, qa]
+
+- id: "5.7.11"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Ignorar blocos"
+  resumo: "A página deveria oferecer link ou outro mecanismo para pular blocos de conteúdo."
+  wcag: ["2.4.1"]
+  papel: [design, dev, qa]
+
+- id: "5.7.12"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Ignorar blocos repetidos entre páginas"
+  resumo: "Em um conjunto de páginas, há link ou mecanismo para pular blocos de conteúdo que se repetem."
+  wcag: ["2.4.1"]
+  papel: [design, dev, qa]
+
+- id: "5.7.13"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Várias formas de encontrar páginas"
+  resumo: "Uma página do conjunto é alcançável por mais de um caminho, salvo se for resultado ou etapa de um processo."
+  wcag: ["2.4.5"]
+  papel: [design, dev, qa]
+
+- id: "5.7.14"
+  tipo: recomendacao
+  tema: "Links e navegação"
+  titulo: "Informação de localização"
+  resumo: "O site deveria informar ao usuário onde ele está em relação às outras páginas ou seções."
+  wcag: ["2.4.8"]
+  papel: [design, dev, qa]
+
+- id: "5.7.15"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Navegação consistente"
+  resumo: "Mecanismos de navegação repetidos mantêm a mesma ordem relativa, salvo mudança feita pelo usuário."
+  wcag: ["3.2.3"]
+  papel: [design, dev, qa]
+
+- id: "5.7.16"
+  tipo: requisito
+  tema: "Links e navegação"
+  titulo: "Ajuda consistente"
+  resumo: "Mecanismos de ajuda repetidos mantêm a mesma ordem relativa, salvo mudança feita pelo usuário."
+  wcag: ["3.2.6"]
+  papel: [design, dev, qa]
+
+- id: "5.8.1"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Semântica de botões"
+  resumo: "Botões têm semântica definida programaticamente."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.8.2"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Uso de botões"
+  resumo: "Botões só são usados para acionar uma funcionalidade."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.8.3"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Rótulos de botões"
+  resumo: "Cada botão tem texto, alternativa ou nome acessível que indica sua função."
+  wcag: ["2.4.6", "4.1.2"]
+  papel: [design, dev, qa]
+
+- id: "5.8.4"
+  tipo: recomendacao
+  tema: "Botões e controles"
+  titulo: "Identificação consistente na página"
+  resumo: "Componentes repetidos com a mesma função na mesma página deveriam ser identificados de forma consistente."
+  wcag: ["3.2.4"]
+  papel: [design, dev, qa]
+
+- id: "5.8.5"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Identificação consistente entre páginas"
+  resumo: "Componentes repetidos com a mesma função em um conjunto de páginas são identificados de forma consistente."
+  wcag: ["3.2.4"]
+  papel: [design, dev, qa]
+
+- id: "5.8.6"
+  tipo: recomendacao
+  tema: "Botões e controles"
+  titulo: "Tamanho de alvo ampliado"
+  resumo: "Alvos interativos deveriam ter ao menos 44 pixels CSS de altura e largura, com exceções (controle equivalente, texto em linha, tamanho do navegador, tamanho essencial)."
+  wcag: ["2.5.5", "2.5.8"]
+  papel: [design, dev, qa]
+
+- id: "5.8.7"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Tamanho mínimo de alvo"
+  resumo: "Alvos interativos têm ao menos 24 pixels CSS de altura e largura, ou espaçamento suficiente, com exceções (equivalente, texto em linha, tamanho do navegador, essencial ou exigido por lei)."
+  wcag: ["2.5.8"]
+  papel: [design, dev, qa]
+
+- id: "5.8.8"
+  tipo: recomendacao
+  tema: "Botões e controles"
+  titulo: "Mudanças de contexto previsíveis"
+  resumo: "Mudanças de contexto deveriam ocorrer só a pedido do usuário, ou haver forma de desativá-las."
+  wcag: ["3.2.1", "3.2.2", "3.2.5"]
+  papel: [design, dev, qa]
+
+- id: "5.8.9"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Sem mudança de contexto ao receber foco"
+  resumo: "Nenhum componente muda o contexto apenas por receber foco ou cursor."
+  wcag: ["3.2.1"]
+  papel: [design, dev, qa]
+
+- id: "5.8.10"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Sem mudança de contexto ao inserir dados"
+  resumo: "Componentes não mudam o contexto quando o usuário informa ou seleciona dados, a menos que haja aviso prévio."
+  wcag: ["3.2.2"]
+  papel: [design, dev, qa]
+
+- id: "5.8.11"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Ativação com ponteiro único"
+  resumo: "Ações de ponteiro único não disparam ao pressionar, a menos que haja conclusão ao soltar, cancelamento ou desfazer, reversão ao soltar ou ação essencial."
+  wcag: ["2.5.2"]
+  papel: [design, dev, qa]
+
+- id: "5.8.12"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Alternativas a gestos"
+  resumo: "Funções que usam gestos multiponto ou de trajeto também funcionam com ponteiro único, salvo gesto essencial ou definido pelo navegador."
+  wcag: ["2.5.1"]
+  papel: [design, dev, qa]
+
+- id: "5.8.13"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Alternativas a arrastar"
+  resumo: "Funções operadas por arrastar também funcionam com clique ou toque simples, salvo arrastar essencial ou definido pelo navegador."
+  wcag: ["2.5.7"]
+  papel: [design, dev, qa]
+
+- id: "5.8.14"
+  tipo: requisito
+  tema: "Botões e controles"
+  titulo: "Alternativas a movimento"
+  resumo: "Funções acionadas por movimento têm alternativa sem movimento, com opção de desativar a resposta ao movimento, salvo movimento essencial."
+  wcag: ["2.5.4"]
+  papel: [design, dev, qa]
+
+- id: "5.8.15"
+  tipo: recomendacao
+  tema: "Botões e controles"
+  titulo: "Retorno dos controles"
+  resumo: "Os controles deveriam dar retorno perceptível quando acionados."
+  wcag: ["1.3.3", "4.1.3"]
+  papel: [design, dev, qa]
+
+- id: "5.9.1"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Rótulos de campos"
+  resumo: "Cada campo tem rótulo, ou finalidade visualmente evidente mais nome acessível."
+  wcag: ["3.2.2", "3.3.2", "4.1.2"]
+  papel: [design, dev, qa]
+
+- id: "5.9.2"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Posição previsível dos rótulos"
+  resumo: "Rótulos ficam em posição previsível em relação aos campos."
+  wcag: ["1.3.1", "1.3.2", "3.3.2"]
+  papel: [design, dev, qa]
+
+- id: "5.9.3"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Rótulos associados programaticamente"
+  resumo: "Rótulos são associados programaticamente aos seus campos."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.9.4"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Rótulos descritivos"
+  resumo: "Rótulos identificam a finalidade do campo, sozinhos ou junto com o agrupamento."
+  wcag: ["2.4.6"]
+  papel: [design, dev, qa]
+
+- id: "5.9.5"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Texto de ajuda em posição previsível"
+  resumo: "Textos de ajuda ficam em posição previsível em relação aos campos."
+  wcag: ["3.3.2"]
+  papel: [design, dev, qa]
+
+- id: "5.9.6"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Campos relacionados agrupados"
+  resumo: "Campos relacionados são agrupados programaticamente."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.9.7"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Campos obrigatórios identificados"
+  resumo: "Campos obrigatórios são marcados de forma que todas as pessoas percebam."
+  wcag: ["3.3.2"]
+  papel: [design, dev, qa]
+
+- id: "5.9.8"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Tipo de entrada determinável"
+  resumo: "O tipo de dado de cada campo é determinado programaticamente."
+  wcag: ["1.3.5"]
+  papel: [dev, qa]
+
+- id: "5.9.9"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Mensagens de erro descritivas"
+  resumo: "Mensagens de erro descrevem o erro em texto e identificam o campo com erro."
+  wcag: ["3.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.9.10"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Sugestão de correção do erro"
+  resumo: "Mensagens de erro sugerem correção quando ela é conhecida, salvo risco à segurança ou à finalidade do conteúdo."
+  wcag: ["3.3.3"]
+  papel: [design, dev, qa]
+
+- id: "5.9.11"
+  tipo: recomendacao
+  tema: "Formulários"
+  titulo: "Prevenção de erros"
+  resumo: "Formulários em geral deveriam permitir reverter, verificar ou confirmar os dados."
+  wcag: ["3.3.4", "3.3.6"]
+  papel: [design, dev, qa]
+
+- id: "5.9.12"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Prevenção de erros em formulários críticos"
+  resumo: "Formulários críticos permitem reverter, verificar ou confirmar os dados."
+  wcag: ["3.3.4"]
+  papel: [design, dev, qa]
+
+- id: "5.9.13"
+  tipo: recomendacao
+  tema: "Formulários"
+  titulo: "Ajuda contextual"
+  resumo: "Formulários deveriam oferecer ajuda contextual, como instruções e dicas relevantes."
+  wcag: ["3.3.5"]
+  papel: [design, dev, qa]
+
+- id: "5.9.14"
+  tipo: recomendacao
+  tema: "Formulários"
+  titulo: "Botão de envio"
+  resumo: "Todo formulário deveria ter um botão para enviar os dados."
+  wcag: ["3.2.2"]
+  papel: [design, dev, qa]
+
+- id: "5.9.15"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Sem entrada redundante"
+  resumo: "Dados já informados são preenchidos automaticamente ou selecionáveis, salvo se a nova entrada for essencial, exigida por segurança ou os dados anteriores já não valerem."
+  wcag: ["3.3.7"]
+  papel: [design, dev, qa]
+
+- id: "5.9.16"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Validação sem demanda sensorial ou motora"
+  resumo: "Métodos de validação que exigem habilidade sensorial ou motora específica oferecem alternativa que não exija."
+  wcag: ["1.1.1", "2.5.6"]
+  papel: [design, dev, qa]
+
+- id: "5.9.17"
+  tipo: recomendacao
+  tema: "Formulários"
+  titulo: "Autenticação acessível (ampliada)"
+  resumo: "A autenticação deveria evitar testes de função cognitiva, oferecer alternativa não cognitiva ou ajuda para concluí-los."
+  wcag: ["3.3.8", "3.3.9"]
+  papel: [design, dev, qa]
+
+- id: "5.9.18"
+  tipo: requisito
+  tema: "Formulários"
+  titulo: "Autenticação acessível (mínima)"
+  resumo: "A autenticação evita testes de função cognitiva, ou oferece alternativa, ou ajuda, ou usa reconhecimento de objetos ou conteúdo não textual do usuário."
+  wcag: ["3.3.8"]
+  papel: [design, dev, qa]
+
+- id: "5.10.1"
+  tipo: requisito
+  tema: "Apresentação"
+  titulo: "Características sensoriais"
+  resumo: "Instruções não dependem apenas de forma, cor, tamanho, posição visual, orientação ou som."
+  wcag: ["1.3.3"]
+  papel: [design, dev, qa]
+
+- id: "5.10.2"
+  tipo: requisito
+  tema: "Apresentação"
+  titulo: "Ordem de apresentação"
+  resumo: "A ordem visual dos elementos preserva o sentido e a operabilidade."
+  wcag: ["1.3.2"]
+  papel: [design, dev, qa]
+
+- id: "5.10.3"
+  tipo: requisito
+  tema: "Apresentação"
+  titulo: "Orientação da tela"
+  resumo: "O conteúdo não trava a visualização ou a operação em uma só orientação, salvo se essencial."
+  wcag: ["1.3.4"]
+  papel: [design, dev, qa]
+
+- id: "5.10.4"
+  tipo: requisito
+  tema: "Apresentação"
+  titulo: "Design responsivo"
+  resumo: "Sem perda de conteúdo ou função, nem rolagem em duas dimensões, com 256 pixels CSS de altura (rolagem horizontal) ou 320 pixels CSS de largura (rolagem vertical), salvo layout bidimensional necessário."
+  wcag: ["1.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.10.5"
+  tipo: recomendacao
+  tema: "Apresentação"
+  titulo: "Área do indicador de foco"
+  resumo: "O indicador de foco deveria cobrir ao menos o perímetro do elemento, com 2 pixels CSS de espessura."
+  wcag: ["2.4.13"]
+  papel: [design, dev, qa]
+
+- id: "5.11.1"
+  tipo: requisito
+  tema: "Uso de cor"
+  titulo: "Uso de cor"
+  resumo: "Nenhum elemento depende só da cor para transmitir informação, indicar ação, pedir resposta ou distinguir elementos visuais."
+  wcag: ["1.4.1"]
+  papel: [design, qa]
+
+- id: "5.11.2"
+  tipo: recomendacao
+  tema: "Uso de cor"
+  titulo: "Contraste de texto (ampliado)"
+  resumo: "Texto com contraste de ao menos 7:1, ou 4,5:1 para texto grande, com exceções (logotipos e texto incidental)."
+  wcag: ["1.4.3", "1.4.6"]
+  papel: [design, qa]
+
+- id: "5.11.3"
+  tipo: requisito
+  tema: "Uso de cor"
+  titulo: "Contraste de texto (mínimo)"
+  resumo: "Texto com contraste de ao menos 4,5:1, ou 3:1 para texto grande, com exceções (logotipos e texto incidental)."
+  wcag: ["1.4.3"]
+  papel: [design, qa]
+
+- id: "5.11.4"
+  tipo: requisito
+  tema: "Uso de cor"
+  titulo: "Contraste de componentes"
+  resumo: "Componentes de interface com contraste de ao menos 3:1 contra o fundo e entre seus estados, salvo inativos."
+  wcag: ["1.4.11"]
+  papel: [design, qa]
+
+- id: "5.11.5"
+  tipo: requisito
+  tema: "Uso de cor"
+  titulo: "Contraste de objetos gráficos"
+  resumo: "Partes gráficas necessárias para entender o conteúdo com contraste de ao menos 3:1 contra o fundo e entre si, salvo aparência essencial."
+  wcag: ["1.4.11"]
+  papel: [design, qa]
+
+- id: "5.11.6"
+  tipo: requisito
+  tema: "Uso de cor"
+  titulo: "Contraste do indicador de foco"
+  resumo: "O indicador de foco com contraste de ao menos 3:1 contra o fundo e entre os estados focado e não focado."
+  wcag: ["1.4.11", "2.4.13"]
+  papel: [design, qa]
+
+- id: "5.12.1"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Espaçamento entre linhas"
+  resumo: "Blocos de texto com espaçamento entre linhas de ao menos 1,5 vez o tamanho da fonte, ou configurável pelo usuário sem perda de conteúdo."
+  wcag: ["1.4.8", "1.4.12"]
+  papel: [design, dev, qa]
+
+- id: "5.12.2"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Espaçamento entre parágrafos"
+  resumo: "Parágrafos com espaçamento de ao menos 2 vezes o tamanho da fonte, ou configurável pelo usuário sem perda de conteúdo."
+  wcag: ["1.4.8", "1.4.12"]
+  papel: [design, dev, qa]
+
+- id: "5.12.3"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Espaçamento entre letras"
+  resumo: "Blocos de texto com espaçamento entre letras de ao menos 0,12 vez o tamanho da fonte, ou configurável pelo usuário sem perda de conteúdo."
+  wcag: ["1.4.12"]
+  papel: [design, dev, qa]
+
+- id: "5.12.4"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Espaçamento entre palavras"
+  resumo: "Blocos de texto com espaçamento entre palavras de ao menos 0,16 vez o tamanho da fonte, ou configurável pelo usuário sem perda de conteúdo."
+  wcag: ["1.4.12"]
+  papel: [design, dev, qa]
+
+- id: "5.12.5"
+  tipo: recomendacao
+  tema: "Conteúdo de texto"
+  titulo: "Alinhamento de blocos de texto"
+  resumo: "Texto alinhado à esquerda em idiomas da esquerda para a direita (e à direita nos demais), salvo alinhamento essencial ao sentido."
+  wcag: ["1.4.8"]
+  papel: [design, dev, qa]
+
+- id: "5.12.6"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Largura de blocos de texto"
+  resumo: "Blocos de texto com no máximo 80 caracteres por linha (40 para chinês, japonês e coreano), ou largura configurável pelo usuário."
+  wcag: ["1.4.8", "1.4.10"]
+  papel: [design, dev, qa]
+
+- id: "5.12.7"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Redimensionamento de texto"
+  resumo: "Texto ampliado a 200% sem tecnologia assistiva não causa perda de conteúdo ou função nem exige rolagem horizontal em linha de janela inteira."
+  wcag: ["1.4.4", "1.4.8"]
+  papel: [design, dev, qa]
+
+- id: "5.12.8"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Semântica de textos especiais"
+  resumo: "Ênfase, citação, abreviação e outros textos especiais têm semântica determinada programaticamente."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.12.9"
+  tipo: requisito
+  tema: "Conteúdo de texto"
+  titulo: "Uso de textos especiais"
+  resumo: "Ênfase, citação, abreviação e outros textos especiais só são usados para esses fins."
+  wcag: ["1.3.1"]
+  papel: [design, dev, qa]
+
+- id: "5.12.10"
+  tipo: recomendacao
+  tema: "Conteúdo de texto"
+  titulo: "Definição de significados"
+  resumo: "Deveria haver mecanismo para identificar definições de palavras, expressões, idiomatismos e jargões incomuns ou restritos."
+  wcag: ["3.1.3"]
+  papel: [design, dev, qa]
+
+- id: "5.12.11"
+  tipo: recomendacao
+  tema: "Conteúdo de texto"
+  titulo: "Siglas e abreviações"
+  resumo: "Deveria haver mecanismo para identificar a forma expandida ou o significado de siglas e abreviações."
+  wcag: ["3.1.4"]
+  papel: [design, dev, qa]
+
+- id: "5.12.12"
+  tipo: recomendacao
+  tema: "Conteúdo de texto"
+  titulo: "Nível de linguagem"
+  resumo: "O texto deveria usar linguagem simples e clara, ou oferecer conteúdo complementar ou versão simplificada para linguagem especializada."
+  wcag: ["3.1.5"]
+  papel: [design, dev, qa]
+
+- id: "5.12.13"
+  tipo: recomendacao
+  tema: "Conteúdo de texto"
+  titulo: "Pronúncia identificada"
+  resumo: "Deveria haver mecanismo para identificar a pronúncia de palavras cujo sentido é ambíguo sem ela."
+  wcag: ["3.1.6"]
+  papel: [design, dev, qa]
+
+- id: "5.13.1"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Título da página"
+  resumo: "Cada página tem título único que a identifica entre as páginas do site."
+  wcag: ["2.4.2"]
+  papel: [dev, qa]
+
+- id: "5.13.2"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Idioma da página"
+  resumo: "O idioma da página é declarado programaticamente."
+  wcag: ["3.1.1"]
+  papel: [dev, qa]
+
+- id: "5.13.3"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Idioma de partes da página"
+  resumo: "Trechos em outro idioma têm o idioma declarado, exceto nomes próprios, termos técnicos, palavras de idioma desconhecido ou estrangeirismos incorporados."
+  wcag: ["3.1.2"]
+  papel: [dev, qa]
+
+- id: "5.13.4"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Título de quadros"
+  resumo: "Todo quadro ou iframe tem título único que o identifica."
+  wcag: ["1.3.1", "4.1.2"]
+  papel: [dev, qa]
+
+- id: "5.13.5"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Zoom não bloqueado"
+  resumo: "A página não bloqueia o recurso de zoom do navegador."
+  wcag: ["1.4.4", "1.4.10"]
+  papel: [dev, qa]
+
+- id: "5.13.6"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Ordem de leitura"
+  resumo: "A ordem dos elementos no código é lógica e intuitiva, preservando sentido e operabilidade."
+  wcag: ["1.3.2"]
+  papel: [dev, qa]
+
+- id: "5.13.7"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Texto visível no nome acessível"
+  resumo: "O nome acessível corresponde ao texto visível do componente ou o contém, de preferência no início."
+  wcag: ["2.5.3"]
+  papel: [dev, qa]
+
+- id: "5.13.8"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Mensagens de status"
+  resumo: "Mensagens de status são determinadas programaticamente, para que usuários de tecnologia assistiva não precisem mover o foco até elas."
+  wcag: ["4.1.3"]
+  papel: [dev, qa]
+
+- id: "5.13.9"
+  tipo: recomendacao
+  tema: "Codificação e marcação semântica"
+  titulo: "Finalidade identificável"
+  resumo: "A finalidade de componentes de interface, ícones e regiões deveria ser determinável programaticamente."
+  wcag: ["1.3.6"]
+  papel: [dev, qa]
+
+- id: "5.13.10"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Componentes com nome acessível"
+  resumo: "Componentes que precisam ser identificados por nome têm nome acessível."
+  wcag: ["4.1.2"]
+  papel: [dev, qa]
+
+- id: "5.13.11"
+  tipo: recomendacao
+  tema: "Codificação e marcação semântica"
+  titulo: "Elementos nativos"
+  resumo: "Os componentes da página deveriam usar elementos HTML nativos."
+  wcag: ["1.3.1"]
+  papel: [dev, qa]
+
+- id: "5.13.12"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Semântica de componentes personalizados"
+  resumo: "Componentes personalizados têm função, estados, propriedades e valores determinados programaticamente, inclusive suas mudanças."
+  wcag: ["1.3.1", "4.1.2"]
+  papel: [dev, qa]
+
+- id: "5.13.13"
+  tipo: requisito
+  tema: "Codificação e marcação semântica"
+  titulo: "Estados, propriedades e valores de componentes personalizados"
+  resumo: "Item listado no sumário; o corpo do texto não estava disponível na cópia lida."
+  wcag: ["4.1.2"]
+  papel: [dev, qa]
+  verificar: "Só o título foi lido. Resumo a escrever a partir da norma."
+
+- id: "5.14.1"
+  tipo: requisito
+  tema: "Áudio e vídeo"
+  titulo: "Alternativa em texto para áudio"
+  resumo: "Conteúdo em áudio tem alternativa em texto."
+  wcag: ["1.2.1"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.2"
+  tipo: requisito
+  tema: "Áudio e vídeo"
+  titulo: "Legendas descritivas para vídeo"
+  resumo: "Vídeo tem legendas descritivas."
+  wcag: ["1.2.2"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.3"
+  tipo: recomendacao
+  tema: "Áudio e vídeo"
+  titulo: "Transcrição para vídeo"
+  resumo: "Vídeo deveria ter transcrição."
+  wcag: ["1.2.1", "1.2.3", "1.2.8"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.4"
+  tipo: requisito
+  tema: "Áudio e vídeo"
+  titulo: "Audiodescrição para vídeo"
+  resumo: "Vídeo tem audiodescrição."
+  wcag: ["1.2.1", "1.2.3", "1.2.5"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.5"
+  tipo: recomendacao
+  tema: "Áudio e vídeo"
+  titulo: "Audiodescrição estendida para vídeo"
+  resumo: "Vídeo deveria ter audiodescrição estendida."
+  wcag: ["1.2.3", "1.2.5", "1.2.7"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.6"
+  tipo: recomendacao
+  tema: "Áudio e vídeo"
+  titulo: "Janela de Libras para conteúdo em áudio"
+  resumo: "Conteúdo em áudio deveria ter janela de Libras."
+  wcag: ["1.2.6"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.7"
+  tipo: requisito
+  tema: "Áudio e vídeo"
+  titulo: "Controle de áudio"
+  resumo: "Áudio tem controle."
+  wcag: ["1.4.2"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.8"
+  tipo: recomendacao
+  tema: "Áudio e vídeo"
+  titulo: "Áudio sem ruído"
+  resumo: "O áudio deveria ser livre de ruído de fundo."
+  wcag: ["1.4.7"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.9"
+  tipo: requisito
+  tema: "Áudio e vídeo"
+  titulo: "Legendas para áudio e vídeo ao vivo"
+  resumo: "Áudio e vídeo ao vivo têm legendas."
+  wcag: ["1.2.4"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.14.10"
+  tipo: recomendacao
+  tema: "Áudio e vídeo"
+  titulo: "Transcrição para áudio ao vivo"
+  resumo: "Áudio ao vivo deveria ter transcrição."
+  wcag: ["1.2.9"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.15.1"
+  tipo: requisito
+  tema: "Animação"
+  titulo: "Controle de animação"
+  resumo: "Animações têm controle."
+  wcag: ["2.2.2"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.15.2"
+  tipo: recomendacao
+  tema: "Animação"
+  titulo: "Animações acionadas por interação"
+  resumo: "Animações acionadas por interação deveriam poder ser desativadas."
+  wcag: ["2.3.3"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.15.3"
+  tipo: recomendacao
+  tema: "Animação"
+  titulo: "Flash intermitente"
+  resumo: "Conteúdo com flash intermitente deveria ser evitado."
+  wcag: ["2.3.2"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.15.4"
+  tipo: requisito
+  tema: "Animação"
+  titulo: "Flash intermitente limitado"
+  resumo: "Flashes são limitados."
+  wcag: ["2.3.1"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.1"
+  tipo: recomendacao
+  tema: "Tempo"
+  titulo: "Limite de tempo"
+  resumo: "Limites de tempo deveriam ser evitados."
+  wcag: ["2.2.1", "2.2.3"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.2"
+  tipo: requisito
+  tema: "Tempo"
+  titulo: "Limite de tempo ajustável"
+  resumo: "Limites de tempo são ajustáveis."
+  wcag: ["2.2.1"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.3"
+  tipo: requisito
+  tema: "Tempo"
+  titulo: "Controle de atualização"
+  resumo: "A atualização automática de conteúdo é controlável."
+  wcag: ["2.2.2"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.4"
+  tipo: recomendacao
+  tema: "Tempo"
+  titulo: "Interrupções"
+  resumo: "Interrupções deveriam poder ser adiadas ou suprimidas."
+  wcag: ["2.2.4"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.5"
+  tipo: recomendacao
+  tema: "Tempo"
+  titulo: "Reautenticação"
+  resumo: "Após reautenticação, o usuário deveria continuar sem perda de dados."
+  wcag: ["2.2.5"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."
+
+- id: "5.16.6"
+  tipo: recomendacao
+  tema: "Tempo"
+  titulo: "Tempo de inatividade"
+  resumo: "O usuário deveria ser avisado sobre o tempo de inatividade que causa perda de dados."
+  wcag: ["2.2.6"]
+  papel: [design, dev, qa]
+  verificar: "Apenas o título foi lido; resumo e detalhes a conferir na norma."

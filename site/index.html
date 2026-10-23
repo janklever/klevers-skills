@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klever's skills</title>
+  <meta name="description" content="Coleção aberta e gratuita de skills pequenas e focadas, no formato SKILL.md.">
+  <meta name="keywords"
+    content="skills, IA, agente de IA,スキル, SKILL.md, open source, acessibilidade, NBR 17225, WCAG, design, desenvolvimento, QA">
+  <meta name="author" content="Jan Klever">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="shortcut icon" href="https://janklever.com.br/assets/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5b564b;
+      --border: #d9d4c7;
+      --accent: #0062ff;
+      --accent-text: #ffffff;
+      --secondary: #0062ff;
+      --focus: #b45309;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14130f;
+        --surface: #1a1a1a;
+        --text: #f1eee6;
+        --muted: #b9b3a3;
+        --border: #3a362c;
+        --accent: #7db7f5;
+        --accent-text: #0d1b2a;
+        --secondary: #7db7f5;
+        --focus: #fbbf24;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      font-smooth: antialiased;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .6rem 1rem;
+      border: 2px solid var(--focus);
+      z-index: 10;
+    }
+
+    .skip:focus {
+      top: 1rem;
+    }
+
+    .wrap {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      padding: 3.5rem 0 2rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      line-height: 1.15;
+      margin: 0 0 .75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+      max-width: 40rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: .55rem 1.1rem;
+      border-radius: 8px;
+      border: 2px solid var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      background: transparent;
+      color: var(--secondary);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--accent-text);
+    }
+
+    .btn:hover {
+      filter: brightness(1.08);
+    }
+
+    section {
+      padding: 1.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 0 0 1rem;
+    }
+
+    .search {
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+
+    .search label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: .35rem;
+    }
+
+    .search input {
+      width: 100%;
+      min-height: 44px;
+      padding: .55rem .8rem;
+      font: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+    }
+
+    ul.cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin: 0 0 .4rem;
+      font-size: 1.1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      word-break: break-word;
+    }
+
+    .card p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .card .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .status {
+      color: var(--muted);
+      margin: 0 0 1rem;
+    }
+
+    .how ol {
+      padding-left: 1.25rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .05rem .35rem;
+      font-size: .92em;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      background: var(--surface);
+      padding: .9rem 1.1rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#skills">Ir para as skills</a>
+
+  <header>
+    <div class="wrap">
+      <h1>Klever's skills</h1>
+      <p class="lead">Skills pequenas e focadas, uma por tarefa, no formato aberto <code>SKILL.md</code>. Gratuitas,
+        abertas e prontas para baixar.</p>
+      <div class="actions">
+        <a class="btn primary" id="download-all" href="downloads/klevers-skills-todas.zip">Baixar todas (.zip)</a>
+        <a class="btn" id="repo-link" href="#" hidden>Ver no GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills disponíveis</h2>
+
+        <div class="search">
+          <label for="search">Buscar skills</label>
+          <input id="search" type="search" autocomplete="off" placeholder="Ex.: checklist, WCAG, contraste">
+        </div>
+
+        <p class="status" id="status" role="status" aria-live="polite">Carregando skills...</p>
+        <ul class="cards" id="skills-list"></ul>
+      </section>
+
+      <section class="how" aria-labelledby="how-to-use-title">
+        <h2 id="how-to-use-title">Como usar</h2>
+        <ol>
+          <li>Baixe o <code>.zip</code> da skill que você quer.</li>
+          <li>Descompacte dentro da pasta de skills da sua ferramenta, por exemplo <code>.claude/skills/</code> no
+            Claude Code ou <code>.github/skills/</code> no GitHub Copilot.</li>
+          <li>Peça a tarefa normalmente. O agente decide quando usar a skill pela descrição dela.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Código e instruções das skills sob licença MIT. Dados (requisitos e mapeamento) sob <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>. Contribuições são
+        bem-vindas pelo repositório.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var skillsList = document.getElementById("skills-list");
+      var status = document.getElementById("status");
+      var searchInput = document.getElementById("search");
+      var repoLink = document.getElementById("repo-link");
+      var all = [];
+
+      function render(items) {
+        skillsList.innerHTML = "";
+        items.forEach(function (s) {
+          var li = document.createElement("li");
+          li.className = "card";
+
+          var h3 = document.createElement("h3");
+          h3.textContent = s.name;
+
+          var p = document.createElement("p");
+          p.textContent = s.description;
+
+          var row = document.createElement("div");
+          row.className = "row";
+
+          var dl = document.createElement("a");
+          dl.className = "btn primary";
+          dl.href = s.download;
+          dl.textContent = "Baixar .zip";
+          dl.setAttribute("aria-label", "Baixar a skill " + s.name + " em .zip");
+          row.appendChild(dl);
+
+          if (window.__repo) {
+            var src = document.createElement("a");
+            src.className = "btn";
+            src.href = window.__repo + "/tree/main/" + s.source;
+            src.textContent = "Ver código";
+            src.setAttribute("aria-label", "Ver o código da skill " + s.name);
+            row.appendChild(src);
+          }
+
+          li.appendChild(h3);
+          li.appendChild(p);
+          li.appendChild(row);
+          skillsList.appendChild(li);
+        });
+
+        status.textContent = items.length === 1 ? "1 skill encontrada." : items.length + " skills encontradas.";
+      }
+
+      function filterSkills() {
+        var q = searchInput.value.trim().toLowerCase();
+        render(all.filter(function (s) {
+          return !q || (s.name + " " + s.description).toLowerCase().indexOf(q) !== -1;
+        }));
+      }
+
+      fetch("skills.json")
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          all = data.skills || [];
+          if (data.repository) {
+            window.__repo = data.repository;
+            repoLink.href = data.repository;
+            repoLink.hidden = false;
+          }
+          render(all);
+        })
+        .catch(function () {
+          status.textContent = "Não foi possível carregar a lista de skills agora. Tente recarregar a página.";
+        });
+
+      searchInput.addEventListener("input", filterSkills);
+    })();
+  </script>
+</body>
+
+</html>
